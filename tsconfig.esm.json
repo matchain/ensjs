@@ -1,0 +1,8 @@
+{
+    "extends": "./tsconfig.build.json",
+    "compilerOptions": {
+      // Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'esnext
+      "module": "esnext",
+      "outDir": "./dist/esm"
+    }
+  }

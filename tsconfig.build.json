@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["./src"],
+  "exclude": ["src/**/*.test.ts", "src/test/**/*", "./src/ABIs/**/*"],
+  "compilerOptions": {
+    // "moduleResolution": "NodeNext",
+    "sourceMap": true,
+    "rootDir": "./src",
+    // "outDir": "./dist",
+    "paths": {
+      "abitype": ["../node_modules/abitype/dist"]
+    }
+  }
+}

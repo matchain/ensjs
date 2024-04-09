@@ -1,0 +1,19 @@
+.DS_Store
+.yarn/*
+node_modules/
+
+.env
+
+dist/
+archives/
+data/
+
+*.tsbuildinfo
+# hardhat
+/cache
+/artifacts
+/coverage
+README.md
+LICENSE
+
+.env.local

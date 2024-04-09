@@ -1,0 +1,63 @@
+{
+  "root": true,
+  "extends": [
+    // "airbnb-base",
+    // "airbnb-typescript/base",
+    // "prettier",
+    // "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.base.json"
+  },
+  "rules": {
+    "no-console": "off",
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "import/extensions": ["off"],
+    "max-classes-per-file": "off",
+    "no-restricted-syntax": ["off"],
+    "consistent-return": ["off"],
+    "import/no-named-as-default": ["off"],
+    "func-names": ["off"],
+    "no-param-reassign": ["off"],
+    "no-underscore-dangle": ["off"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["camelCase"],
+        "leadingUnderscore": "allowSingleOrDouble",
+        "trailingUnderscore": "allowSingleOrDouble"
+      },
+      {
+        "selector": "memberLike",
+        "format": ["camelCase", "UPPER_CASE", "PascalCase"],
+        "leadingUnderscore": "allowSingleOrDouble",
+        "trailingUnderscore": "allowSingleOrDouble"
+      },
+      {
+        "selector": "objectLiteralProperty",
+        "filter": { "regex": "\\d+", "match": true },
+        "format": null
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE"],
+        "leadingUnderscore": "allowSingleOrDouble",
+        "trailingUnderscore": "allowSingleOrDouble"
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      }
+    ],
+    "no-useless-return": ["off"],
+    "radix": ["error", "as-needed"],
+    "no-bitwise": ["off"],
+    "import/no-extraneous-dependencies": ["off"],
+    "no-empty": ["error", { "allowEmptyCatch": true }]
+  },
+  "ignorePatterns": ["node_modules", "dist", "data", "cache", "esbuild.js"]
+}
