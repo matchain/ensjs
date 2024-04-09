@@ -43,6 +43,20 @@ const ethAddress = client.getAddressRecord({ name: 'ens.mat' })
 
 If you want customize ens-contracts, you can refer to [atchain/ens-contracts](https://github.com/matchain/ens-contracts)
 
+## Develop package
+
+If you want customize ensjs for your chain, you can write chain and contracts info in src/chain_config.js, then use yalc to test.
+```js
+// publish package to local store
+yalc publish 
+// update package to local store
+yalc push
+
+// *** project use ensjs package, remember change @matchain/ensjs@3.5.0 to the package name what you need ***
+yalc add @matchain/ensjs@3.5.0
+yalc remove @matchain/ensjs@3.5.0
+```
+
 ## ENS Docs
 
 Docs can be found [here](https://docs.ens.domains/). Full docs site coming soon.
